@@ -30,12 +30,6 @@ The model is a **TF-IDF + Logistic Regression** pipeline trained on **~1 million
 
 ---
 
-## 🚀 Live Demo
-
-👉 **[Open Live Demo](https://youtube-comment-sentiment-analysis-pravinchavan.streamlit.app/)**
-
----
-
 ## 🏷️ Technologies
 
 ![Python](https://img.shields.io/badge/Python-3.12-3776AB?logo=python&logoColor=white)
@@ -57,9 +51,7 @@ The model is a **TF-IDF + Logistic Regression** pipeline trained on **~1 million
 4. 💬 **Top 5 positive and negative comments**
 5. 📥 **Downloadable CSV** of all analysed comments
 
-ML pipeline:
 
-**Data Cleaning → Train/Test Split → TF-IDF Vectorization → Model Comparison → Hyperparameter Tuning → Final Model → Serialization → Streamlit Deployment**
 
 ---
 
@@ -94,7 +86,7 @@ ML pipeline:
 
 # 📍 Dataset
 
-**Source:** [YouTube Comments Sentiment Dataset (Kaggle)](https://www.kaggle.com/datasets/amaanpoonawala/youtube-comments-sentiment-dataset)
+**Source:** [(Kaggle)](https://www.kaggle.com/datasets/amaanpoonawala/youtube-comments-sentiment-dataset)
 
 | Property | Value |
 |---|---|
@@ -393,43 +385,6 @@ streamlit run app.py
 
 ---
 
-# 📦 Model & Dependency Compatibility
-
-The pipeline was saved with **scikit-learn 1.9.1** (Python 3.12). Pin the same version in `requirements.txt` to avoid errors when loading the `.pkl` file.
-
----
-
-# ☁️ Deployment
-
-```text
-Local Development → GitHub Repository → Streamlit Community Cloud → Live Web App
-```
-
-The API key is stored in Streamlit secrets and never committed to the repository.
-
----
-
-# 🚧 Limitations & Future Improvements
-
-### Current Limitations
-
-- The model is trained mainly on **English** comments. **Hinglish / code-mixed** comments (common on Indian creators' videos) are often labelled Neutral, as seen in the gaming vlog demo.
-- Bag-of-words models can't understand sarcasm, context or tone.
-- Short comments and emoji-only comments carry little signal.
-- Neutral is the hardest class (F1 0.66).
-- Labels in the training dataset may be noisy.
-
-### Future Improvements
-
-- Fine-tune a **transformer** (BERT / RoBERTa / XLM-R) for higher accuracy
-- Add **multilingual and Hinglish** support
-- Add emoji-aware features
-- Add reply-thread analysis and topic modelling
-- Add **SHAP / LIME** explainability
-- Compare sentiment across multiple videos or channels
-- Cache API results to save quota
-
----
 
 # 📌 Key Takeaways
 
